@@ -1,0 +1,14 @@
+<h1>Dojo Mail</h1>
+<tr>
+  <th><h3>Email</h3></th>
+  <th><h3>Importace</h3></th>
+  <th><h3>Subject</h3></th>
+  <th><h3>Content</h3></th>
+</tr>
+<tr *ngFor="let user of user">
+  <td>{{user.email | lowercase}}</td>
+  <td *ngIf='user.importance'>High</td>
+  <td *ngIf='!user.importance'>Low</td>
+  <td>{{user.subject}}</td>
+  <td>{{user.content}}</td>
+</tr>
